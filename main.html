@@ -1,113 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Step Form</title>
-    <style>
-        .step {
-            display: none;
-        }
-        .step.active {
-            display: block;
-        }
-        .navigation {
-            margin-top: 20px;
-        }
-        button {
-            margin: 5px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi-Step Form</title>
+  <style>
+    .step { display: none; }
+    .step.active { display: block; }
+    .navigation { margin-top: 20px; }
+    button { margin: 5px; }
+  </style>
 </head>
 <body>
-    <h1>Multi-Step Form</h1>
-    <form id="multiStepForm" action="https://formsubmit.co/keppabig@gmail.com" method="POST" enctype="multipart/form-data"></form>
-        <input type="hidden" name="_captcha" value="false">
-        <!-- Step 1 -->
-        <div class="step active">
-            <h2>Step 1</h2>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
 
-        <!-- Step 2 -->
-        <div class="step">
-            <h2>Step 2</h2>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+<h1>Multi-Step Form</h1>
 
-        <!-- Step 3 -->
-        <div class="step">
-            <h2>Step 3</h2>
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
-        </div>
+<form id="multiStepForm" action="https://formsubmit.co/keppabig@gmail.com" method="POST" enctype="multipart/form-data">
+  
+  <input type="hidden" name="_captcha" value="false">
 
-        <!-- Step 4 -->
-        <div class="step">
-            <h2>Step 4</h2>
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender" required>
-                <option value="">Select</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
+  <!-- Step 1 -->
+  <div class="step active">
+    <h2>Step 1</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
 
-        <!-- Step 5 -->
-        <div class="step">
-            <h2>Step 5</h2>
-            <label for="country">Country:</label>
-            <input type="text" id="country" name="country" required>
-        </div>
+  <!-- Step 2 -->
+  <div class="step">
+    <h2>Step 2</h2>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
 
-        <!-- Step 6 -->
-        <div class="step">
-            <h2>Step 6</h2>
-            <label for="comments">Comments:</label>
-            <textarea id="comments" name="comments" required></textarea>
-            <br>
-            <label for="photo">Upload Photo:</label>
-            <input type="file" id="photo" name="photo" accept="image/*" required>
-        </div>
+  <!-- Step 3 -->
+  <div class="step">
+    <h2>Step 3</h2>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+  </div>
 
-        <div class="navigation">
-            <button type="button" id="prevBtn" onclick="changeStep(-1)">Previous</button>
-            <button type="button" id="nextBtn" onclick="changeStep(1)">Next</button>
-            <button type="submit" id="submitBtn" style="display: none;">Submit</button>
-        </div>
-    </form>
+  <!-- Step 4 -->
+  <div class="step">
+    <h2>Step 4</h2>
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
 
-    <script>
-        let currentStep = 0;
-        const steps = document.querySelectorAll('.step');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const submitBtn = document.getElementById('submitBtn');
+  <!-- Step 5 -->
+  <div class="step">
+    <h2>Step 5</h2>
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" required>
+  </div>
 
-        function showStep(step) {
-            steps.forEach((stepDiv, index) => {
-                stepDiv.classList.toggle('active', index === step);
-            });
-            prevBtn.style.display = step === 0 ? 'none' : 'inline-block';
-            nextBtn.style.display = step === steps.length - 1 ? 'none' : 'inline-block';
-            submitBtn.style.display = step === steps.length - 1 ? 'inline-block' : 'none';
-        }
+  <!-- Step 6 -->
+  <div class="step">
+    <h2>Step 6</h2>
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" required></textarea>
+    <br>
+    <label for="photo">Upload Photo:</label>
+    <input type="file" id="photo" name="photo" accept="image/*" required>
+  </div>
 
-        function changeStep(direction) {
-            currentStep += direction;
-            if (currentStep < 0) currentStep = 0;
-            if (currentStep >= steps.length) currentStep = steps.length - 1;
-            showStep(currentStep);
-        }
+  <!-- Navigation Buttons -->
+  <div class="navigation">
+    <button type="button" id="prevBtn" onclick="changeStep(-1)">Previous</button>
+    <button type="button" id="nextBtn" onclick="changeStep(1)">Next</button>
+    <button type="submit" id="submitBtn" style="display: none;">Submit</button>
+  </div>
+</form>
 
-        document.getElementById('multiStepForm').addEventListener('submit', (e) => {
-            alert('Form submitted successfully!');
-        });
+<script>
+  let currentStep = 0;
+  const steps = document.querySelectorAll('.step');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const submitBtn = document.getElementById('submitBtn');
 
-        showStep(currentStep);
-    </script>
+  function showStep(step) {
+    steps.forEach((stepDiv, index) => {
+      stepDiv.classList.toggle('active', index === step);
+    });
+    prevBtn.style.display = step === 0 ? 'none' : 'inline-block';
+    nextBtn.style.display = step === steps.length - 1 ? 'none' : 'inline-block';
+    submitBtn.style.display = step === steps.length - 1 ? 'inline-block' : 'none';
+  }
+
+  function changeStep(direction) {
+    currentStep += direction;
+    if (currentStep < 0) currentStep = 0;
+    if (currentStep >= steps.length) currentStep = steps.length - 1;
+    showStep(currentStep);
+  }
+
+  // Don't block actual submission
+  document.getElementById('multiStepForm').addEventListener('submit', (e) => {
+    // No preventDefault
+    alert("Submitting form...");
+  });
+
+  showStep(currentStep);
+</script>
+
 </body>
 </html>
