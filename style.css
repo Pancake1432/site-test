@@ -40,8 +40,8 @@ input::-webkit-inner-spin-button {
     img{
         height: 22%;
         width: 22%;
-        min-height: 130px;
-        min-width: 130px;
+        min-height: 140px;
+        min-width: 140px;
         float: right;
         border: 5px solid #e60000; /* Bold red border */
         box-shadow: 0 4px 12px rgba(230, 0, 0, 0.6); /* Red shadow */
@@ -49,11 +49,6 @@ input::-webkit-inner-spin-button {
         padding: 5px;
         background: linear-gradient(145deg, #ffcccc, #ffe6e6); /* Subtle red gradient background */
         max-width: 300px;
-    }
-    @media (max-width: 550px) {
-        img{
-          margin-right: 30px;
-        }
     }
     h2 {
         font-size: 20px;
