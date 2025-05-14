@@ -26,6 +26,7 @@ input::-webkit-inner-spin-button {
 
 #job-posting {
     max-width: 750px;
+    min-width: 380px;
     margin: 0px auto;
     background-color: #fff;
     border-radius: 10px;
@@ -37,8 +38,10 @@ input::-webkit-inner-spin-button {
         margin-bottom: 10px;
     }
     img{
-        height: 230px;
-        width: 230px;
+        height: 22%;
+        width: 22%;
+        min-height: 170px;
+        min-width: 170px;
         float: right;
         border: 5px solid #e60000; /* Bold red border */
         box-shadow: 0 4px 12px rgba(230, 0, 0, 0.6); /* Red shadow */
