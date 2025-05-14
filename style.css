@@ -17,9 +17,6 @@ input::-webkit-inner-spin-button {
     margin: auto;
     display: block;
 }
-body.shrink-font {
-    font-size: 14px;
-  }
 #PaksTxt{
     text-align: center;
     font-size: 30px;
@@ -52,6 +49,11 @@ body.shrink-font {
         padding: 5px;
         background: linear-gradient(145deg, #ffcccc, #ffe6e6); /* Subtle red gradient background */
         max-width: 300px;
+    }
+    @media (max-width: 550px) {
+        img{
+          margin-right: 30px;
+        }
     }
     h2 {
         font-size: 20px;
@@ -112,8 +114,6 @@ body.shrink-font {
     }
 }
 
-
-
 .custom-select select {
   appearance: none; /* Remove default arrow */
   -webkit-appearance: none;
@@ -156,7 +156,7 @@ body.shrink-font {
     }
     @media (max-width: 550px) {
         select {
-            font-size: 12px;
+            font-size: 11px;
             width: 390px;
         }
         .custom-select {
