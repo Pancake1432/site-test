@@ -72,7 +72,7 @@
             <input type="tel" id="zip" name="Zip" required placeholder="Zip" maxlength="5" style="width: 50px;">
         </div>
         <div class="custom-select">
-            <select id="familyStatus" name="FamilyStatus" type="select" required >
+            <select id="familyStatus" name="FamilyStatus" type="select" required>
                 <option value="" disabled selected>Current Family Status</option>
                 <option value="single">Single</option>
                 <option value="married">Married</option>
@@ -249,11 +249,6 @@ function updateFileName(inputId) {
     const fileNameSpan = document.getElementById("fileName_" + inputId);
     fileNameSpan.textContent = input.files.length ? input.files[0].name : "No file chosen";
   }
-
-  if (window.location.pathname.endsWith(".html")) {
-  let newUrl = window.location.pathname.replace(".html", "");
-  window.history.pushState(null, null, newUrl);
-}
 
 </script>
 
