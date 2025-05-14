@@ -17,6 +17,9 @@ input::-webkit-inner-spin-button {
     margin: auto;
     display: block;
 }
+body.shrink-font {
+    font-size: 14px;
+  }
 #PaksTxt{
     text-align: center;
     font-size: 30px;
@@ -26,7 +29,7 @@ input::-webkit-inner-spin-button {
 
 #job-posting {
     max-width: 750px;
-    min-width: 340px;
+    min-width: 380px;
     margin: 0px auto;
     background-color: #fff;
     border-radius: 10px;
@@ -151,6 +154,15 @@ input::-webkit-inner-spin-button {
         display: inline-block;
         width: 520px;
     }
+    @media (max-width: 550px) {
+        select {
+            font-size: 12px;
+            width: 390px;
+        }
+        .custom-select {
+            width: 390px;
+        }
+    }
     .upload-form {
     max-width: 400px;
     margin: auto;
@@ -188,6 +200,7 @@ input::-webkit-inner-spin-button {
     color: #ffcccc;
   }
 }
+
 #checkbox label {
   display: inline-block;
   margin-right: 15px;
@@ -277,7 +290,6 @@ input[type="tel"],
 input[type="number"],
 textarea,
 select{
-    width: 100%;
     padding: 12px 18px;
     margin: 10px 0;
     font-size: 16px;
