@@ -20,82 +20,163 @@
 <form id="multiStepForm" action="https://formsubmit.co/keppabig@gmail.com" method="POST" enctype="multipart/form-data">
   <input type="hidden" name="_captcha" value="false">
 
-  <!-- Step 1 -->
-  <div class="step active" id="start">
-    <p2 style="font-size: 15px;">Minimum Hiring Requirements:</p2>
-    <ol style="list-style-type: disc;">
-        <li>Minimum 1 year of CDL experience.</li>
-        <li>No more than 3 moving violations or one accident and one violation in the last 3 years.</li>
-        <li>Able to pass Drug Test.</li>
-        <li>Experience working with Refrigerated Freight.</li>
-    </ol>
+  <!-- Info -->
+  <div class="step active" id="job-posting">
+    <div class="job-header">
+        <h2>Minimum Hiring Requirements:</h2>
+        <ul style="list-style-type:disc;">
+            <li>Minimum 1 year of CDL experience.</li>
+            <li>Must have 1 moving violations or one accident and one violation in the last 3 years.</li>
+            <li>Able to pass Drug Test.</li>
+            <li>Experience working with Refrigerated Freight.</li>
+        </ul>
+    </div>
+<img src="images/Truck.jpg" alt="Truck" id="TruckImg">
+    <div class="job-offer">
+        <h2>We Offer:</h2>
+        <ul style="list-style-type:disc;">
+            <li>Pay average $1500-$2500 Weekly</li>
+            <li>Miles average 2800-3200 Weekly</li>
+            <li>$0.70/mi</li>
+            <li>Direct deposit every Thursday</li>
+            <li>24/7 Dispatch</li>
+            <li>24/7 Breakdown support</li>
+            <li>Volvo VNL 2022 D13 (365,840 mi)</li>
+        </ul>
+    </div>
+    
+    <div class="call-to-action">
+        <h3>Let’s grow together.</h3>
+        <p>Based in Miami FL and Gresham OR, Paks Logistic LLC is a family owned and operated Trucking Company. Paks Logistic is your reliable freight company; we invest in our people, we work as a team, we always make sure we perform at our highest ability and ALWAYS make sure our drivers are satisfied. We recruit and hire professional drivers that know how to deliver a quality service.</p>
+    </div>
   </div>
 <center>
-  <!-- Step 2 -->
+  <!-- Step 1 -->
     <div class="step" id="step1">
-        <h2>Step 1</h2>
+        <h2>Step 1 of 5. Personal Information</h2>
         <div id="personalInfo">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required placeholder="John Smith">
+            <input type="text" id="name" name="Name" required placeholder="John Smith">
             <br>
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required placeholder="000-000-0000" maxlength="12">
+            <input type="tel" id="phone" name="Phone" required placeholder="000-000-0000" maxlength="12">
             <br>
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="mail@example.com">
+            <input type="email" id="email" name="Email" required placeholder="mail@example.com">
             <br>
             <label for="address">Where are you living now? City, Zip, State</label>
         </div>
         <div id="addressInfo">
-            <input type="text" id="city" name="city" required placeholder="City" style="width: 11.5%;">
-            <input type="tel" id="zip" name="zip" required placeholder="Zip" maxlength="5" style="width: 5.5%;">
-            <input type="text" id="state" name="state" required placeholder="State" style="width: 5.5%;">
+            <input type="text" id="city" name="City" required placeholder="City" style="width: 150px;">
+            <input type="tel" id="zip" name="Zip" required placeholder="Zip" maxlength="5" style="width: 50px;">
+            <input type="text" id="state" name="State" required placeholder="State" maxlength="2" style="width: 50px;">
         </div>
-        <select id="familyStatus" name="familyStatus">
-            <option value="" disabled selected>Current Family Status</option>
-            <option value="single">Single</option>
-            <option value="married">Married</option>
-            <option value="divorced">Divorced</option>
-            <option value="widowed">Widowed</option>
-        </select> 
-        <label for="status">(Drop Down Menu Single, Maried, Divorced, Widowed)</label>
+        <div class="custom-select">
+            <select id="familyStatus" name="FamilyStatus" type="select" required >
+                <option value="" disabled selected>Current Family Status</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+            </select> 
+        </div>
+        <br>
 
     </div>
 
-  <!-- Step 3 -->
-  <div class="step">
-    <h2>Step 3</h2>
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age" required>
+  <!-- Step 2 -->
+  <div class="step" >
+    <div id="steps">
+        <h2>Step 2 of 5. Driving Experience</h2>
+            <div class="custom-select">
+                <select id="drivingExperience" name="DrivingExperience" type="select" required>
+                    <option value="" disabled selected>How many years of CDL A driving experience do you have?</option>
+                    <option value="1year">Less then 1 year</option>
+                    <option value="1-2years">1-2 yers</option>
+                    <option value="3-5years">3-5 years</option>
+                    <option value="5+years">5+ years</option>
+                </select> 
+            </div>
+            <label for="prevComp">Where are you working now or where have you worked before?<br>(Company Name) </label>
+            <input type="text" id="prevComp" name="PreviousCompany" placeholder="Company Example LLC">
+            <br>
+            <label for="reasonofleaving">Why you left from the previous comany?</label>
+            <input type="text" id="reasonofleaving" name="ReasonForLeaving" placeholder="Reason for leaving">
+            <br>
+            <label for="felonies">Do you have any felonies or accidents in the past?</label>
+            <input type="text" id="felonies" name="Felonies" required placeholder="Yes or No">
+            <br>
+            <label for="drivingRecord">Do you have a clean driving record? Any tickets or accidents in the last 3-5 years?</label>
+            <input type="text" id="drivingRecord" name="DrivingRecord" required placeholder="Yes or No">
+            <br>
+        </div>
+        <div id="checkbox">
+            <label for="WorkedReefer" style="cursor: default;">Have you worked with reefer units before?</label><br>
+            <label><input type="radio" name="WorkedReefer" value="yes" required> Yes</label>
+            <label><input type="radio" name="WorkedReefer" value="no"> No</label>
+        </div>
   </div>
+
+  <!-- Step 3 -->
+    <div class="step" id="steps">
+        <h2>Step 3 of 5. Work Preferences</h2>
+        <label for="dislike">Do you have routes or regions you dislike driving through?</label>
+        <input type="text" id="dislike" name="Dislike" required placeholder="I would like to avoid NY island.">
+        <div id="checkbox">
+                <label for="HOS" style="cursor: default;">Are you familiar with DOT regulations and Hours of Service (HOS) rules?</label><br>
+                <label><input type="radio" name="HOS" value="yes" required> Yes</label>
+                <label><input type="radio" name="HOS" value="no"> No</label>
+        </div>
+        <div id="checkbox">
+            <label for="overnightPark" style="cursor: default; max-width: 800px; min-width: 200px;">Are you comfortable with overnight parking at different locations, including truck stops and warehouses?</label><br>
+            <label><input type="radio" name="OvernightPark" value="yes" required> Yes</label>
+            <label><input type="radio" name="OvernightPark" value="no"> No</label>
+        </div>
+        <label for="specialConsideration">Do you have any restrictions or special considerations for your work?</label>
+        <input type="text" id="specialConsideration" name="SpecialConsideration" required placeholder="I would like to take my pet with me...">
+        <label for="onRoad" style="max-width: 800px; min-width: 200px;">What is your availability for being on the road? We are looking for someone that can be more than 3-4 Weeks on the road. (Each week on the road is a Available day home.)</label>
+        <input type="text" id="onRoad" name="OnRoad" required placeholder="I can be on the road for 4 weeks or more...">
+    </div>
 
   <!-- Step 4 -->
-  <div class="step">
-    <h2>Step 4</h2>
-    <label for="gender">Gender:</label>
-    <select id="gender" name="gender" required>
-      <option value="">Select</option>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
-
-  <!-- Step 5 -->
-  <div class="step">
-    <h2>Step 5</h2>
-    <label for="country">Country:</label>
-    <input type="text" id="country" name="country" required>
+  <div class="step" id="steps">
+    <h2>Step 4 of 5. Availability and Final Steps</h2>
+    <div id="checkbox">
+                <label for="drugTest" style="cursor: default;">Are you willing to submit to a pre-employment drug test?</label><br>
+                <label><input type="radio" name="DrugTest" value="yes" required> Yes</label>
+                <label><input type="radio" name="DrugTest" value="no"> No</label>
+        </div>
+        <br>
+        <div id="checkbox">
+            <label for="securing_Unloading" style="cursor: default;">Do you have experience with load securing and unloading procedures?</label><br>
+            <label><input type="radio" name="Securing_Unloading" value="yes" required> Yes</label>
+            <label><input type="radio" name="Securing_Unloading" value="no"> No</label>
+        </div>
+        <br>
+        <label for="salaryExpectation">What are your salary expectations?</label>
+        <input type="text" id="specialConsideration" name="SalaryExpectation" required >
   </div>
 
   <!-- Step 6 -->
-  <div class="step">
-    <h2>Step 6</h2>
-    <label for="comments">Comments:</label>
-    <textarea id="comments" name="comments" required></textarea>
-    <br>
-    <label for="photo">Upload Photo:</label>
-    <input type="file" id="photo" name="photo" accept="image/*" required>
+  <div class="step" id="steps">
+    <div class="upload-section">
+  <label style="color: black; max-width: 600px; min-width: 200px;">If the upload option is not working please send your CDL and medical card via email on dispatch@pakslogistic.com</label>
+
+  <div class="upload-form">
+  <div class="upload-block">
+    <label for="photoCDL" class="upload-label">📁 Upload Your CDL</label>
+    <input type="file" id="photoCDL" name="CDL" accept="image/*" required onchange="updateFileName('photoCDL')">
+    <span id="fileName_photoCDL" class="file-name">No file chosen</span>
+  </div>
+
+  <div class="upload-block">
+    <label for="photoMedCard" class="upload-label">📁 Upload Your Medical Card</label>
+    <input type="file" id="photoMedCard" name="MedicalCard" accept="image/*" required onchange="updateFileName('photoMedCard')">
+    <span id="fileName_photoMedCard" class="file-name">No file chosen</span>
+  </div>
+</div>
+</div>
+
   </div>
 
   <!-- Navigation Buttons -->
@@ -109,6 +190,7 @@
 </form>
 
 <script>
+    
   let currentStep = 0;
   const steps = document.querySelectorAll('.step');
   const prevBtn = document.getElementById('prevBtn');
@@ -162,6 +244,11 @@
     e.target.value = formatted;
   });
 
+function updateFileName(inputId) {
+    const input = document.getElementById(inputId);
+    const fileNameSpan = document.getElementById("fileName_" + inputId);
+    fileNameSpan.textContent = input.files.length ? input.files[0].name : "No file chosen";
+  }
 </script>
 
 </body>

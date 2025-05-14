@@ -1,0 +1,329 @@
+body {
+    user-select: none;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+#PaksLogo{
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    display: block;
+}
+#PaksTxt{
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+    margin-top: 10px;
+}
+
+#job-posting {
+    max-width: 750px;
+    margin: 0px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    color: #333;
+    
+    .job-header, .job-offer, .call-to-action {
+        margin-bottom: 10px;
+    }
+    img{
+        height: 230px;
+        width: 230px;
+        float: right;
+        border: 5px solid #e60000; /* Bold red border */
+        box-shadow: 0 4px 12px rgba(230, 0, 0, 0.6); /* Red shadow */
+        border-radius: 15px; /* Rounded corners */
+        padding: 5px;
+        background: linear-gradient(145deg, #ffcccc, #ffe6e6); /* Subtle red gradient background */
+        max-width: 300px;
+    }
+    h2 {
+        font-size: 20px;
+        color: #d32f2f;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-top: 20px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        font-size: 12px;
+        margin: 8px 0;
+    }
+}
+
+
+#step1{
+    font-size: 15px;
+    color: #000;
+    flex-direction: column;
+    align-items: center;
+    input{
+        height: 20px;
+    }
+    select{
+        height: 50px;
+        margin-top: 15px;
+    }
+    .custom-select {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    }
+}
+
+#personalInfo{
+    input{
+        width: 250px;
+        display: block;
+        text-align: left;
+    }
+}
+
+#addressInfo{
+    input {
+    margin: 0 0.30%;
+    }
+}
+
+
+
+.custom-select select {
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 2px solid #e60000;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(230, 0, 0, 0.3);
+}
+
+/* Custom arrow using a pseudo-element */
+.custom-select::after {
+  content: '▼';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #e60000;
+  font-size: 14px;
+}
+
+#steps{
+    font-size: 15px;
+    color: #000;
+    flex-direction: column;
+    align-items: center;
+    input{
+        width: 330px;
+        display: block;
+        text-align: left;
+    }
+    .custom-select {
+        position: relative;
+        display: inline-block;
+        width: 520px;
+    }
+    .upload-form {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .upload-block {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .upload-label {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #cc1f1f;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .upload-label:hover {
+    background-color: #e60000;
+    transform: scale(1.03);
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .file-name {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #ffcccc;
+  }
+}
+#checkbox label {
+  display: inline-block;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+#checkbox input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #b71c1c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+button {
+    background: linear-gradient(145deg, #c62828, #b71c1c);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: skewX(-25deg);
+    transition: left 0.5s;
+  }
+
+  button:hover::before {
+    left: 125%;
+  }
+
+  button:hover {
+    background: linear-gradient(145deg, #e53935, #c62828);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  button:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Individual button tweaks (optional) */
+  #prevBtn {
+    background: linear-gradient(145deg, #8e0000, #7f0000);
+  }
+
+  #prevBtn:hover {
+    background: linear-gradient(145deg, #b71c1c, #8e0000);
+  }
+
+  #submitBtn {
+    background: linear-gradient(145deg, #d32f2f, #b71c1c);
+  }
+
+  #submitBtn:hover {
+    background: linear-gradient(145deg, #f44336, #d32f2f);
+  }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select{
+    width: 100%;
+    padding: 12px 18px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: #fff;
+    border: 2px solid #d32f2f;
+    border-radius: 12px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #b71c1c;
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.2);
+    background-color: #fff8f8;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Select section */
+select:focus {
+    outline: none;
+    border-color: #b71c1c;
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.2);
+    background-color: #fff8f8;
+}
+
+option {
+    padding: 10px;
+}
+
+select:disabled {
+    background-color: #f8f8f8;
+    color: #999;
+    cursor: not-allowed;
+}
+
+
+
+
